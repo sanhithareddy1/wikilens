@@ -1,131 +1,141 @@
-# WIKI-LENS
+ABOUT THE PROJECT
 
-**Tagline:** Show. Learn. Amaze.
+WIKI-LENS is a browser-based educational web application that turns your webcam into a learning tool. By pointing your camera at real-world objects, the app detects what it sees and instantly displays Wikipedia summaries and fun facts.
 
----
+The project is fully frontend-based and runs directly in the browser without any backend or installation.
 
-## 📚 Overview
+FEATURES
 
-**WIKI-LENS** is a fun and educational web application that uses your **webcam** to recognize real-world objects and instantly provide interesting facts and Wikipedia summaries about them. Just point your camera at anything — and let WIKI-LENS teach you about it in real time!
+Live webcam-based object detection
 
----
+Real-time object recognition using TensorFlow.js and MobileNet
 
-## ✨ Features
+Instant Wikipedia summaries for detected objects
 
-- 🎥 **Live Webcam Object Detection**  
-  Uses [TensorFlow.js](https://www.tensorflow.org/js) + MobileNet to identify objects from your webcam feed.
+Fun facts to make learning engaging
 
-- 📖 **Instant Knowledge Cards**  
-  Fetches real-time Wikipedia summaries about detected objects.
+Lightweight, responsive, and easy to use
 
-- 🎉 **Fun Fact Generator**  
-  Displays quirky, educational trivia for popular objects.
+No backend or database required
 
-- ⚡ **No Backend Needed**  
-  Entirely frontend-powered and runs right in the browser.
+PROJECT STRUCTURE
 
-- 📱 **Lightweight & Responsive**  
-  Clean UI, mobile-friendly, and no installation needed.
+wiki-lens/
 
----
+index.html : Main HTML file
 
-## 📂 Project Structure
+style.css : Styling and layout
 
-```
+script.js : Webcam access, ML logic, and Wikipedia API calls
 
-/wiki-lens
-├── index.html        # Main HTML page
-├── style.css         # Styling for UI
-└── script.js         # App logic (webcam + ML + Wikipedia)
+GETTING STARTED
 
-````
+OPTION 1: RUN DIRECTLY (FASTEST)
 
----
+Download or clone the project folder.
 
-## 🚀 Getting Started
+Open index.html in a modern browser (Chrome or Firefox recommended).
 
-### Option 1: Run Directly (Quickest)
+Allow webcam access when prompted.
 
-1. Download or clone the project files.
-2. Open `index.html` in a browser (Chrome/Firefox).
-3. Grant webcam access.
-4. Show objects and enjoy live learning!
+Point the camera at objects and explore.
 
-### Option 2: Run via Local Server (Recommended)
+Note: Some browsers restrict webcam access without a server.
+
+OPTION 2: RUN USING A LOCAL SERVER (RECOMMENDED)
 
 Using Python 3:
 
-```bash
+Open terminal and navigate to the project folder:
 cd wiki-lens
+
+Start a local server:
 python3 -m http.server 8000
-````
 
-Then open your browser to:
-**[http://localhost:8000](http://localhost:8000)**
+Open a browser and go to:
+http://localhost:8000
 
----
+HOW IT WORKS
 
-## 🧠 How It Works
+Accesses the webcam stream.
 
-1. Loads the webcam stream.
-2. Loads the MobileNet machine learning model.
-3. Captures video frames and runs object detection every 2 seconds.
-4. Detects object → gets its name → calls the Wikipedia API.
-5. Displays:
+Loads the MobileNet object detection model using TensorFlow.js.
 
-   * 🟢 Object name
-   * 📘 Wikipedia summary
-   * 🌟 Fun fact (if available)
+Captures video frames every few seconds.
 
----
+Detects objects from the video feed.
 
-## 🔧 Tech Stack
+Uses the detected object name to query the Wikipedia REST API.
 
-* **HTML5 + CSS3 + JavaScript**
-* **TensorFlow\.js** – Machine learning in the browser
-* **MobileNet** – Pre-trained lightweight object classifier
-* **Wikipedia REST API** – Real-time info for detected objects
+Displays:
 
----
+Object name
 
-## 💡 Possible Future Enhancements
+Wikipedia summary
 
-* Save object history for user learning
-* Add voice assistant support
-* Fun fact database expansion
-* Object guessing quiz mode
-* Offline caching of known object summaries
+Fun fact (if available)
 
----
+TECH STACK
 
-## 🐞 Troubleshooting
+HTML5
 
-| Problem                 | Solution                                               |
-| ----------------------- | ------------------------------------------------------ |
-| Webcam not loading      | Allow permission in browser                            |
-| Blank Wikipedia summary | Some object names may not match exact Wikipedia titles |
-| CORS issues             | Use local server or deploy via GitHub Pages            |
+CSS3
 
----
+JavaScript
 
-## 📜 License
+TensorFlow.js
 
-This project is open source and available under the [MIT License](LICENSE).
+MobileNet (pre-trained model)
 
----
+Wikipedia REST API
 
-## 👨‍💻 Author
+KNOWN LIMITATIONS
 
-Made with ❤️ by \[Murari]
-Feel free to contribute or fork the project!
+Some object names may not match exact Wikipedia article titles.
 
----
+Webcam access may require HTTPS or a local server in certain browsers.
 
-## 🌐 Live Demo (Optional)
+FUTURE ENHANCEMENTS
 
-You can host this on **GitHub Pages** by uploading the folder to a repo and enabling Pages under Settings → Pages.
+Save detected object history
 
----
+Voice-based explanations
 
-> Learning starts with curiosity.
-> WIKI-LENS helps you discover the world around you, one object at a time.
+Interactive quiz mode
+
+Expanded fun-fact database
+
+Offline caching for known objects
+
+TROUBLESHOOTING
+
+Problem: Webcam not loading
+Solution: Check browser permissions
+
+Problem: Empty Wikipedia summary
+Solution: Try a different object or angle
+
+Problem: CORS issues
+Solution: Run using a local server or deploy via GitHub Pages
+
+DEPLOYMENT
+
+You can deploy this project using GitHub Pages:
+
+Upload the project folder to a GitHub repository.
+
+Go to repository Settings.
+
+Open Pages section.
+
+Select main branch and root directory.
+
+Save and access the live site.
+
+CONTRIBUTING
+
+Contributions, suggestions, and forks are welcome.
+Feel free to improve features, UI, or performance.
+
+Learning starts with curiosity.
+WIKI-LENS helps you explore the world, one object at a time.
